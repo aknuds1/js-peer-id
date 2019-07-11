@@ -142,6 +142,7 @@ const computeDigest = (pubKey) => {
     return pubKey.hash()
   }
 }
+  opts.keyType = opts.keyType || 'RSA'
 
 const computePeerId = async (privKey, pubKey) => {
   const digest = await computeDigest(pubKey)

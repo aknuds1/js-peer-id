@@ -1,8 +1,8 @@
 {
-  "name": "peer-id",
+  "name": "@arve.knudsen/peer-id",
   "version": "0.13.1",
   "description": "IPFS Peer Id implementation in Node.js",
-  "leadMaintainer": "Pedro Teixeira <i@pgte.me>",
+  "leadMaintainer": "Arve Knudsen <arve.knudsen@gmail.com>",
   "main": "src/index.js",
   "bin": "src/bin.js",
   "scripts": {
@@ -30,9 +30,9 @@
     "npm": ">=6.0.0"
   },
   "bugs": {
-    "url": "https://github.com/libp2p/js-peer-id/issues"
+    "url": "https://github.com/arve.knudsen/js-peer-id/issues"
   },
-  "homepage": "https://github.com/libp2p/js-peer-id",
+  "homepage": "https://github.com/arve.knudsen/js-peer-id",
   "devDependencies": {
     "aegir": "^19.0.5",
     "bundlesize": "~0.18.0",
@@ -46,7 +46,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/libp2p/js-peer-id.git"
+    "url": "https://github.com/arve.knudsen/js-peer-id.git"
   },
   "contributors": [
     "Arve Knudsen <arve.knudsen@gmail.com>",
