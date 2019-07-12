@@ -8,8 +8,6 @@ chai.use(dirtyChai)
 const expect = chai.expect
 const crypto = require('libp2p-crypto')
 const mh = require('multihashes')
-const waterfall = require('async/waterfall')
-const waterfall = require('async/waterfall')
 
 const PeerId = require('../src')
 
@@ -77,22 +75,6 @@ describe('PeerId', () => {
   it('Recreate from a Public Key', async () => {
     const id = await PeerId.createFromPubKey(testId.pubKey)
     expect(testIdB58String).to.equal(id.toB58String())
-      done()
-    })
-  })
-
-  it('can be created from a Secp256k1 public key', (done) => {
-    waterfall([
-      (cb) => {
-        crypto.keys.generateKeyPair('secp256k1', 256, cb)
-      },
-      (privKey, cb) => {
-        PeerId.createFromPubKey(privKey.public.bytes, cb)
-      },
-    ], (err, id) => {
-      expect(err).to.not.exist()
-      const expB58 = mh.toB58String(mh.encode(id.pubKey.bytes, 'identity'))
-      expect(id.toB58String()).to.equal(expB58)
   })
 
   it('Recreate from a Private Key', async () => {
